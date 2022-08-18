@@ -5,6 +5,9 @@
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -la
-      - run: make say-hello
-  
+      - name: checkout repo
+        uses: actions/checkout@v2
+
+      - name: build application
+        run: make say-hello
+
